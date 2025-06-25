@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 716205544131974634}
-  - component: {fileID: 2042294325518871893}
+  - component: {fileID: 5104174587170349346}
   - component: {fileID: 6257980530777530207}
   - component: {fileID: 9114557365844605442}
   - component: {fileID: 1381620966561148845}
@@ -36,7 +36,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2042294325518871893
+--- !u!114 &5104174587170349346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,10 +45,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018266170718575047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de2795a82b1cae24d9b47385594eb9d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dc68a6713a797b49951f110e69b1cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usedEnergy: 0
+  usedEnergy_clone: 0
+  speed_clone: 0
 --- !u!198 &6257980530777530207
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -57,7 +58,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018266170718575047}
   serializedVersion: 8
-  lengthInSec: 1
+  lengthInSec: 0.5
   simulationSpeed: 1
   stopAction: 2
   cullingMode: 0
@@ -132,7 +133,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.2
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -303,8 +304,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 0.4
+      scalar: 0.6
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -886,7 +887,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 170
       minScalar: 10
       maxCurve:
         serializedVersion: 2
