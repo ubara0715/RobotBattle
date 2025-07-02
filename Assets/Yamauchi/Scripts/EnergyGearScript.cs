@@ -45,10 +45,12 @@ public class EnergyGearScript : MonoBehaviour
     // privert関数
     GameObject EnergyBullet_clone()
     {
+        Vector3 instPos = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z + instantiatePos);
+
         GameObject energyBullet_clone =
             Instantiate(
                 energyBullet,
-                gameObject.transform.forward * instantiatePos, //AddForceなので生成位置にモノがあるとうまく発射できない、のでもし発射しないなぁと思ったら調整してね
+                instPos, //AddForceなので生成位置にモノがあるとうまく発射できない、のでもし発射しないなぁと思ったら調整してね
                 Quaternion.identity
                 );
 
@@ -57,6 +59,6 @@ public class EnergyGearScript : MonoBehaviour
 
     void Shot(Rigidbody rb)
     {
-        rb.AddForce(transform.forward * (speed / Time.deltaTime), ForceMode.Force);
+        rb.AddForce(transform.forward * (speed / Time.fixedDeltaTime), ForceMode.Force);
     }
 }
